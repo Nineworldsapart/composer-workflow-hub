@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { margin: 0; padding: 0; background: #0a0e17; color: #d1dce8; font-family: monospace; }
+
+/* ==========================================================================
+   GLOBAL REFINED DARK SATIN TITANIUM & 3D HARDWARE CONSOLE ENGINE
+   ========================================================================== */
+
+/* Darkened satin titanium with subtle milled grain and glare-free specular sweeps */
+.brushed-dark-chrome,
+.metal-unit,
+.rack-chassis {
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.015) 0px,
+      rgba(255, 255, 255, 0.015) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    linear-gradient(
+      140deg,
+      #111318 0%,
+      #171a23 20%,
+      #222634 40%,
+      #2d3345 50%,
+      #1e222e 60%,
+      #12141a 80%,
+      #191c26 100%
+    );
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.85);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.6),
+    0 8px 20px -4px rgba(0, 0, 0, 0.7);
+}
+
+/* Global 3D hardware console styling: applies to sidebars, cards, and modal boxes */
+aside,
+nav,
+div[class*="rounded-2xl"][class*="border"],
+div[class*="rounded-xl"][class*="border"],
+div[class*="bg-[#0e0e13]"],
+div[class*="bg-[#141419]"],
+div[class*="bg-[#181820]"],
+div[class*="bg-zinc-900"] {
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    linear-gradient(
+      145deg,
+      #12141b 0%,
+      #191c26 35%,
+      #252938 50%,
+      #181b24 65%,
+      #101218 100%
+    );
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* Recessed Inset Wells (Inputs, Search Boxes, Menus, Selectors) */
+input,
+select,
+.chrome-recessed,
+.recessed-display,
+.metal-inset {
+  background: #090a0e;
+  border-top: 2px solid #000000;
+  border-left: 1px solid #06070a;
+  border-right: 1px solid #1a1c24;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    inset 0 2px 6px rgba(0, 0, 0, 0.9),
+    inset 0 1px 2px rgba(0, 0, 0, 0.8),
+    0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Tactile 3D Console Buttons */
+button {
+  transition: all 0.12s ease-in-out;
+}
+button:not([class*="bg-emerald"]):not([class*="text-emerald"]):not([class*="hover:text-white"]) {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+button:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
